@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    ul {
+        list-style: none;
+        color: pink;
+    }
+    .menu > li {
+        display: inline-block;
+        border: solid;
+        width: 90px;
+        padding: 3px;
+        margin: -1.5px;
+        position: relative;
+        border-bottom-style: outset;
+        background-color: blue;
+    }
+    .submenu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: none;
+        background-color: coral;
+    }
+    .submenu > li {
+        border: solid;
+        padding: 3px;
+        width: 90px;
+        margin-top: 0;
+        margin-bottom: 1px;
+        margin-left: -42px;
+        border-bottom-style: ridge;
+    }
+    .menu li:hover .submenu {
+        display: block;
+    }
+    .menu li:hover {
+        background-color: grey;
+    }
+    @media all and (max-width: 700px) {
+        .menu > li {
+            display: grid;
+            margin: 1px;
+        }
+        .submenu {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            display: none;
+        }
+        .submenu > li {
+            margin-left: -36px;
+            margin-top: -3px;
+            margin-bottom: 4px;
+        }
+    }
+</style>
+<body>
+<nav>
+    <ul class="menu">
+        <li>Понедельник</li>
+        <li>Вторник</li>
+        <li>Среда
+            <ul class="submenu">
+                <li>Завтрак</li>
+                <li>Обед</li>
+                <li>Ужин</li>
+            </ul>
+        </li>
+        <li>Четверг</li>
+        <li>Пятница</li>
+        <li>Суббота</li>
+    </ul>
+</nav>
+</body>
+</html>
